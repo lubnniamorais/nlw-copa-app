@@ -17,10 +17,17 @@ export function Button({title, type = 'PRIMARY', ...rest}: Props) {
       _pressed={{
         bg: type === 'SECONDARY' ? 'red.600' : 'yellow.600'
       }}
+      _loading={{
+        _spinner: {color: 'black'}
+      }}
 
       {...rest}
     >
-      <Text>
+      <Text
+        fontSize='sm'
+        fontFamily='heading'
+        color={type === 'SECONDARY' ? 'white' : 'black'}
+      >
         {title}
       </Text>
     </ButtonNativeBase>
