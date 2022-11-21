@@ -10,7 +10,7 @@ export function SignIn() {
 
   const {signIn, user} = useAuth();
 
-  console.log('Dados do Usuário', user);
+  // console.log('Dados do Usuário', user);
 
   return (
     <Center flex={1} bgColor="gray.900" p={7}>
