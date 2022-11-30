@@ -11,8 +11,8 @@ import { Button } from "../components/Button";
 
 export function New() {
   
-  const[title, setTitle] = useState('');
-  const[isLoading, setIsLoading] = useState(false);
+  const [title, setTitle] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   
   const toast = useToast();
 
@@ -28,7 +28,7 @@ export function New() {
     try {
       setIsLoading(true);
 
-      await api.post('/pools', {title});
+      await api.post('/pools', { title: title.toUpperCase() });
 
       toast.show({
         title: "Bolão criado com sucesso!",
